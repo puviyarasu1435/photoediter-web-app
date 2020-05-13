@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="work.css">
+	<title>photo eadit</title>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body >
+<h1> KITE web application</h1>
+<div class="file" onclick="selectimage()">
+	<input type="file" id="foto-file">
+	select image
+</div>
+<div class="upperbut">
+	<table>
+	<tr>
+	   <td><button class="buttons" onclick="crop()">crop</button></td>
+	   
+	</tr>
+	<tr><td><button class="buttons" onclick="fliipvertically()">filp</button></td></tr>
+	</table>
+</div>
+<div class="imagc">
+	<img id="foto-image" class="image">
+</div>
+<div class="botbuttons">
+	  <button class="buttons" onclick="makeGrayScale()">grayScale</button></td>
+	 <button class="buttons" onclick="makeBright()">brightness</button></td>
+	<button class="buttons" onclick="makeDark()">darkness</button></td>
+	
+	<tr>
+	   <td><button class="buttons" onclick="makeBlur()">blur</button></td>
+	   <td><button class="buttons" onclick="makeEmboss()">emboss</button></td>
+	   <td><button class="buttons" onclick="makeSharp()">sharp</button></td>
+	</tr>
+	<tr>
+	<td>
+	   <input type="color" id="color-picker" value="#000000" oninput="makeColorize(this)">
+	   <button class="colorbutton" onclick="opencolorpicker()">colorize</button>
+	</td>
+	<td>
+	   <input type="color" id="colorize-color-picker" value="#000000" oninput="applyColorfilter(this)">
+	   <button class="colorbutton" onclick="opencolorizecolorpicker()">color filter</button>
+	</td>
+	<td>
+	   <button class="colorbutton" onclick="makeTransparent()"><div id="color-preview"></div>Transparent</button>
+	</td>
+	</tr>
+	<tr>
+	    <td colspan="3"><button class="down" onclick="download()">download</button></td>
+	</tr>
+	</table>
+</div>
+</body>
+<script src="https://rawcdn.githack.com/kousik19/foto.js/045defe1a5ce06220e084e4e6f6fbaccb7621841/foto.min.js"></script>
+</html>
